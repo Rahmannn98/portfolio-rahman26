@@ -24,3 +24,30 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+/* Perspective biar terasa depth */
+.perspective {
+  perspective: 1000px;
+}
+
+/* Path animation */
+.path-line {
+  stroke-dasharray: 200;
+  stroke-dashoffset: 200;
+  transition: stroke-dashoffset 1.2s ease;
+}
+
+.group:hover .path-line {
+  stroke-dashoffset: 0;
+}
+
+/* Arrow fade in */
+.path-arrow {
+  opacity: 0;
+  transform: translateX(-5px);
+  transition: all 0.5s ease 0.8s;
+}
+
+.group:hover .path-arrow {
+  opacity: 1;
+  transform: translateX(0);
+}
