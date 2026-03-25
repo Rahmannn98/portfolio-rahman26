@@ -5,13 +5,13 @@ export default function Projects() {
   return (
     <section id="projects" className="w-full max-w-6xl px-6 py-24 relative flex flex-col items-center">
       {/* Background Text Overlay */}
-      <h2 className="absolute top-0 left-1/2 -translate-x-1/2 text-[8rem] md:text-[14rem] font-serif text-white/[0.02] select-none -z-10 tracking-widest pointer-events-none leading-none">
+      <h2 className="absolute top-0 left-1/2 -translate-x-1/2 text-[8rem] md:text-[14rem] font-[family-name:var(--font-playfair)] text-white/[0.02] select-none -z-10 tracking-widest pointer-events-none leading-none">
         Projects
       </h2>
       
       <div className="text-center mb-16 z-10">
-        <p className="text-[#c19d67] font-serif italic mb-2">project</p>
-        <h3 className="text-5xl font-serif">Work</h3>
+        <p className="text-[#c19d67] font-[family-name:var(--font-playfair)] italic mb-2">Project</p>
+        <h3 className="text-5xl font-[family-name:var(--font-playfair)]">Work</h3>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 z-10">

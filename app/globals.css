@@ -1,53 +1,6 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}
-/* Perspective biar terasa depth */
-.perspective {
-  perspective: 1000px;
-}
-
-/* Path animation */
-.path-line {
-  stroke-dasharray: 200;
-  stroke-dashoffset: 200;
-  transition: stroke-dashoffset 1.2s ease;
-}
-
-.group:hover .path-line {
-  stroke-dashoffset: 0;
-}
-
-/* Arrow fade in */
-.path-arrow {
-  opacity: 0;
-  transform: translateX(-5px);
-  transition: all 0.5s ease 0.8s;
-}
-
-.group:hover .path-arrow {
-  opacity: 1;
-  transform: translateX(0);
+@theme {
+  /* Memaksa font-serif menggunakan Playfair */
+  --font-serif: var(--font-playfair), ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
 }

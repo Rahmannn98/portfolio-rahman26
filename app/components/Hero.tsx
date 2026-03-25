@@ -3,16 +3,16 @@ import Image from "next/image";
 
 export default function Hero() {
     return (
-        <section id="about" className="w-full max-w-7xl px-6 pt-36 pb-32 relative flex flex-col items-center">
+        <section id="about" className="w-full max-w-7xl px-6 pt-52 pb-32 relative flex flex-col items-center">
             <h1
-                className="absolute top-12 left-1/2 -translate-x-1/2 text-[10rem] md:text-[14rem] font-serif select-none tracking-widest pointer-events-none -z-10 leading-none"
+                // Pakai font-[family-name:var(--font-playfair)]
+                className="absolute top-24 left-1/2 -translate-x-1/2 text-[12rem] md:text-[18rem] lg:text-[22rem] font-[family-name:var(--font-playfair)] select-none pointer-events-none -z-10 leading-none"
                 style={{
                     background: "linear-gradient(180deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0) 100%)",
                     WebkitBackgroundClip: "text",
                     WebkitTextFillColor: "transparent",
                     backgroundClip: "text",
                     color: "transparent",
-                    WebkitTextStroke: "1px rgba(255, 255, 255, 0.1)",
                     filter: "drop-shadow(0px 10px 15px rgba(255, 255, 255, 0.1))"
                 }}
             >
@@ -57,14 +57,15 @@ export default function Hero() {
 
                 {/* 3. Teks Biografi Section */}
                 <div className="flex-1 text-left relative md:mt-10">
-                    <h2 className="text-5xl md:text-6xl font-serif italic mb-10 text-white tracking-wide">
+                    {/* Pakai font-[family-name:var(--font-playfair)] */}
+                    <h2 className="text-5xl md:text-6xl font-[family-name:var(--font-playfair)] italic mb-10 text-white tracking-wide">
                         Saifulloh Rahman
                     </h2>
 
                     <div className="flex gap-5">
                         <div className="flex flex-col items-center pt-2 gap-3 w-4">
-                            <div className="h-full w-[1px] bg-gray-700"></div>
-                            <span className="tracking-[0.4em] text-[10px] uppercase rotate-90 origin-center text-gray-500 font-light translate-y-6">ABOUT Me</span>
+                            <div className="h-full w-[1px] bg-white"></div>
+                            <span className="tracking-[0.4em] text-[10px] uppercase rotate-90 origin-center text-white font-light translate-y-6">ABOUT</span>
                         </div>
 
                         <div className="pl-6">
