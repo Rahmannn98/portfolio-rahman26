@@ -22,69 +22,50 @@ export default function Hero() {
             </h1>
 
             <div className="w-full max-w-5xl flex flex-col md:flex-row gap-12 items-center md:items-start justify-between z-10 mt-20">
-                <div className="relative flex-shrink-0 w-[320px] h-[420px] cursor-pointer">
-                    
-                    <div className="absolute -bottom-4 -left-8 w-70 z-40 pointer-events-none opacity-80 transition-opacity">
+
+                <motion.div
+                    className="relative flex-shrink-0 w-[320px] h-[420px] cursor-pointer"
+                    initial="rest"
+                    whileHover="hover"
+                >
+                    <div className="absolute -bottom-4 -left-8 w-70 z-40 pointer-events-none opacity-80">
                         <img src="/arrow-path.png" alt="decoration" className="w-full h-auto" />
                     </div>
 
+                    {/* KARTU BELAKANG */}
                     <motion.div
-                        className="absolute top-4 left-4 p-3 pb-16 scale-95 origin-bottom-right"
-                        style={{ zIndex: 10 }}
-                        initial={{ rotate: 12, x: 16, y: 16 }}
-                        whileHover={{
-                            rotate: -2,
-                            x: 0,
-                            y: -16,
-                            scale: 1,
-                            zIndex: 30,
-                            transition: {
-                                delay: 0.2, // Jeda sedikit agar kartu depan geser dulu
-                                duration: 1.2, // PELAN (sebelumnya 0.5)
-                                // Kurva Bezier Custom: decelerates very gradually for maximum smoothness
-                                ease: [0.19, 1, 0.22, 1] 
-                            }
+                        className="absolute top-0 left-0 p-3 pb-16 origin-bottom-right"
+                        variants={{
+                            // Nilai x diubah dari 24 menjadi 8 agar lebih ke kiri
+                            rest: { rotate: 12, x: 0, y: 24, scale: 0.95, zIndex: 10 },
+
+                            hover: { rotate: -4, x: 0, y: 0, scale: 1, zIndex: 30 }
                         }}
-                        transition={{ duration: 1.2, ease: [0.19, 1, 0.22, 1] }} // Juga pelan saat Off
+
+                        transition={{ duration: 1.2, ease: [0.25, 1, 0.5, 1] }}
                     >
                         <div className="relative w-64 h-80 overflow-hidden shadow-xl">
                             <Image src="/belakang.png" alt="Secondary Profile" fill />
                         </div>
                     </motion.div>
-
+                    
+                    {/* KARTU DEPAN */}
                     <motion.div
                         className="absolute top-0 left-0 p-5 pb-16 origin-bottom-left"
-                        style={{ zIndex: 20 }}
-                        initial={{ rotate: -4, x: 0, y: 0 }}
-                        whileHover={{
-                            x: [-128, -128],
-                            rotate: [-4, -20], 
-                            scale: [1, 0.9],
-                            zIndex: [20, 0], 
-                            transition: {
-                                duration: 1.3, // PELAN (sebelumnya 0.6)
-                                ease: [0.19, 1, 0.22, 1],
-                                times: [0, 0.5] 
-                            }
+                        variants={{
+
+                            rest: { rotate: -4, x: 0, y: 0, scale: 1, zIndex: 20 },
+                            
+                            // Nilai x di sini juga wajib diubah dari 24 menjadi 8 agar simetris
+                            hover: { rotate: 12, x: 8, y: 24, scale: 0.95, zIndex: 10 }
                         }}
-                        animate={{
-                            x: [null, 128, 0], 
-                            rotate: [null, 5, -4],
-                            scale: [null, 1.05, 1],
-                            zIndex: [null, 20, 20],
-                            transition: {
-                                duration: 1.4, // PELAN SAAT DILEPAS (sebelumnya 0.7)
-                                ease: [0.19, 1, 0.22, 1],
-                                times: [0, 0.2, 1] 
-                            }
-                        }}
+                        transition={{ duration: 1.2, ease: [0.25, 1, 0.5, 1] }}
                     >
                         <div className="relative w-64 h-80 overflow-hidden shadow-2xl">
                             <Image src="/dpn.png" alt="Main Profile" fill />
                         </div>
                     </motion.div>
-
-                </div>
+                </motion.div>
 
                 <div className="flex-1 text-left relative md:mt-10">
                     <h2 className="text-5xl md:text-6xl font-[family-name:var(--font-playfair)] italic mb-10 text-white tracking-wide">

@@ -5,9 +5,19 @@ export default function Projects() {
   return (
     <section id="projects" className="w-full max-w-6xl px-6 py-24 relative flex flex-col items-center">
       {/* Background Text Overlay */}
-      <h2 className="absolute top-0 left-1/2 -translate-x-1/2 text-[8rem] md:text-[14rem] font-[family-name:var(--font-playfair)] text-white/[0.02] select-none -z-10 tracking-widest pointer-events-none leading-none">
-        Projects
-      </h2>
+       <h2  
+                className="absolute top-0 left-1/2 -translate-x-1/2 text-[12rem] md:text-[18rem] lg:text-[22rem] font-[family-name:var(--font-playfair)] font-bold select-none pointer-events-none -z-10 leading-none"
+                style={{
+                    background: "linear-gradient(180deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0) 100%)",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                    backgroundClip: "text",
+                    color: "transparent",
+                    filter: "drop-shadow(0px 10px 15px rgba(255, 255, 255, 0.1))"
+                }}
+            >
+                Project
+        </h2>
       
       <div className="text-center mb-16 z-10">
         <p className="text-[#c19d67] font-[family-name:var(--font-playfair)] italic mb-2">Project</p>
@@ -18,7 +28,7 @@ export default function Projects() {
         {/* Project Card 1 */}
         <div className="group cursor-pointer">
           <div className="relative w-full aspect-video overflow-hidden mb-4 bg-gray-900 border border-gray-800">
-            <Image src="/project1.jpg" alt="Thamrin Nine Hackathon" fill className="object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-500 group-hover:scale-105" />
+            <Image src="/dpn.png" alt="Thamrin Nine Hackathon" fill className="object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-500 group-hover:scale-105" />
             <div className="absolute right-0 top-0 bottom-0 w-12 bg-black/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
               <span className="rotate-90 text-xs tracking-widest text-white whitespace-nowrap">VIEW</span>
             </div>
@@ -38,7 +48,7 @@ export default function Projects() {
         {/* Project Card 2 */}
         <div className="group cursor-pointer">
           <div className="relative w-full aspect-video overflow-hidden mb-4 bg-gray-900 border border-gray-800">
-            <Image src="/project2.jpg" alt="Apple Developer Academy Project" fill className="object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-500 group-hover:scale-105" />
+            <Image src="/dpn.png" alt="Apple Developer Academy Project" fill className="object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-500 group-hover:scale-105" />
             <div className="absolute right-0 top-0 bottom-0 w-12 bg-black/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
               <span className="rotate-90 text-xs tracking-widest text-white whitespace-nowrap">VIEW</span>
             </div>
