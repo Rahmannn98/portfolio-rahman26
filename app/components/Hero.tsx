@@ -6,10 +6,11 @@ import { SiNextdotjs, SiReact, SiTailwindcss, SiFramer } from "react-icons/si";
 
 export default function Hero() {
     return (
-        <section id="about" className="w-full max-w-7xl px-6 pt-52 pb-32 relative flex flex-col items-center">
+        <section id="about" className="w-full max-w-5xl px-6 pt-52 pb-32 relative flex flex-col items-center">
             <h1
-                className="absolute top-24 left-1/2 -translate-x-1/2 text-[12rem] md:text-[18rem] lg:text-[22rem] font-[family-name:var(--font-playfair)] font-bold select-none pointer-events-none -z-10 leading-none"
+                className="absolute top-24 left-1/2 -translate-x-1/2 font-[family-name:var(--font-playfair)] font-bold select-none pointer-events-none -z-10 leading-none whitespace-nowrap"
                 style={{
+                    fontSize: "clamp(5rem, 20vw, 22rem)",
                     background: "linear-gradient(180deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0) 100%)",
                     WebkitBackgroundClip: "text",
                     WebkitTextFillColor: "transparent",
@@ -31,8 +32,6 @@ export default function Hero() {
                     <div className="absolute -bottom-4 -left-8 w-70 z-40 pointer-events-none opacity-80">
                         <img src="/arrow-path.png" alt="decoration" className="w-full h-auto" />
                     </div>
-
-                    {/* KARTU BELAKANG */}
                     <motion.div
                         className="absolute top-0 left-0 p-3 pb-16 origin-bottom-right"
                         variants={{
@@ -48,14 +47,14 @@ export default function Hero() {
                             <Image src="/belakang.png" alt="Secondary Profile" fill />
                         </div>
                     </motion.div>
-                    
+
                     {/* KARTU DEPAN */}
                     <motion.div
                         className="absolute top-0 left-0 p-5 pb-16 origin-bottom-left"
                         variants={{
 
                             rest: { rotate: -4, x: 0, y: 0, scale: 1, zIndex: 20 },
-                            
+
                             // Nilai x di sini juga wajib diubah dari 24 menjadi 8 agar simetris
                             hover: { rotate: 12, x: 8, y: 24, scale: 0.95, zIndex: 10 }
                         }}
