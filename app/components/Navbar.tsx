@@ -76,204 +76,215 @@ export default function Navbar() {
 
     return (
         <header
+    className="
+        fixed
+        top-5
+        left-1/2
+        z-50
+        w-fit
+        max-w-[94vw]
+        -translate-x-1/2
+        font-[family-name:var(--font-playfair)]
+        md:top-8
+    "
+>
+    <nav
+        aria-label="Main navigation"
+        className="
+            inline-flex
+            min-h-16
+            max-w-full
+            items-center
+            justify-center
+            rounded-full
+            border
+            border-white/[0.14]
+            bg-white/[0.055]
+            px-4
+            py-2
+
+            shadow-[
+                0_12px_35px_rgba(0,0,0,0.22),
+                inset_0_1px_0_rgba(255,255,255,0.16)
+            ]
+
+            backdrop-blur-[10px]
+            backdrop-saturate-125
+
+            transition-all
+            duration-300
+
+            hover:border-white/[0.20]
+            hover:bg-white/[0.07]
+
+            sm:px-5
+        "
+    >
+        <div
             className="
-                fixed
-                top-5
-                left-1/2
-                z-50
-                w-[94%]
-                max-w-[610px]
-                -translate-x-1/2
-                font-[family-name:var(--font-playfair)]
-                md:top-8
+                inline-flex
+                w-max
+                items-center
+                justify-center
+                gap-2
+                sm:gap-3
             "
         >
-            <nav
-                aria-label="Main navigation"
+            {/* Logo */}
+            <a
+                href="#home"
+                aria-label="Back to homepage"
                 className="
+                    group
                     flex
-                    min-h-16
+                    h-10
+                    w-10
+                    shrink-0
                     items-center
+                    justify-center
+                    overflow-hidden
                     rounded-full
-                    border
-                    border-white/[0.14]
-                    bg-white/[0.055]
-                    px-3
-                    py-2
-
-                    shadow-[
-                        0_12px_35px_rgba(0,0,0,0.22),
-                        inset_0_1px_0_rgba(255,255,255,0.16)
-                    ]
-
-                    backdrop-blur-[10px]
-                    backdrop-saturate-125
 
                     transition-all
                     duration-300
 
-                    hover:border-white/[0.20]
-                    hover:bg-white/[0.07]
+                    hover:bg-white/[0.05]
 
-                    sm:px-4
-                    md:px-5
+                    focus-visible:outline-none
+                    focus-visible:ring-2
+                    focus-visible:ring-[#c19d67]
+                    focus-visible:ring-offset-2
+                    focus-visible:ring-offset-black
                 "
             >
-                {/* Logo */}
-                <a
-                    href="#home"
-                    aria-label="Back to homepage"
+                <Image
+                    src="/logo.png"
+                    alt="Saifulloh Rahman logo"
+                    width={26}
+                    height={60}
+                    priority
                     className="
-        group
-        flex
-        h-11
-        w-11
-        shrink-0
-        items-center
-        justify-center
-        overflow-hidden
-        rounded-full
+                        h-7
+                        w-auto
+                        max-w-full
+                        object-contain
 
-        transition-all
-        duration-300
+                        transition-transform
+                        duration-300
 
-        hover:bg-white/[0.05]
-
-        focus-visible:outline-none
-        focus-visible:ring-2
-        focus-visible:ring-[#c19d67]
-        focus-visible:ring-offset-2
-        focus-visible:ring-offset-black
-    "
-                >
-                    <Image
-                        src="/logo.png"
-                        alt="Saifulloh Rahman logo"
-                        width={26}
-                        height={60}
-                        priority
-                        className="
-            h-8
-            w-auto
-            max-w-full
-            object-contain
-
-            transition-transform
-            duration-300
-
-            group-hover:scale-105
-        "
-                    />
-                </a>
-
-                {/* Divider */}
-                <div
-                    aria-hidden="true"
-                    className="
-                        mx-2
-                        h-6
-                        w-px
-                        shrink-0
-                        bg-white/10
-                        sm:mx-3
+                        group-hover:scale-105
                     "
                 />
+            </a>
 
-                {/* Navigation items */}
-                <div
-                    className="
-                        ml-auto
-                        flex
-                        items-center
-                        justify-end
-                        gap-2
-                        sm:gap-3
-                        md:gap-5
-                    "
-                >
-                    {navigationItems.map((item) => {
-                        const isActive =
-                            activeSection === item.sectionId;
+            {/* Divider */}
+            <div
+                aria-hidden="true"
+                className="
+                    mx-1
+                    h-6
+                    w-px
+                    shrink-0
+                    bg-white/10
+                "
+            />
 
-                        return (
-                            <a
-                                key={item.href}
-                                href={item.href}
-                                aria-current={
-                                    isActive ? 'page' : undefined
-                                }
-                                onClick={(event) =>
-                                    handleNavigation(
-                                        event,
-                                        item.sectionId
-                                    )
-                                }
-                                className={`
-                                    group
-                                    relative
-                                    flex
-                                    min-h-11
-                                    items-center
-                                    justify-center
-                                    whitespace-nowrap
+            {/* Navigation items */}
+            <div
+                className="
+                    flex
+                    items-center
+                    justify-center
+                    gap-3
+                    sm:gap-4
+                    md:gap-5
+                "
+            >
+                {navigationItems.map((item) => {
+                    const isActive =
+                        activeSection === item.sectionId;
 
-                                    px-1
-                                    text-[10px]
-                                    font-medium
-                                    tracking-wide
+                    return (
+                        <a
+                            key={item.href}
+                            href={item.href}
+                            aria-current={
+                                isActive ? 'page' : undefined
+                            }
+                            onClick={(event) =>
+                                handleNavigation(
+                                    event,
+                                    item.sectionId
+                                )
+                            }
+                            className={`
+                                group
+                                relative
+                                flex
+                                min-h-10
+                                items-center
+                                justify-center
+                                whitespace-nowrap
 
-                                    transition-colors
-                                    duration-300
+                                px-1
+                                text-[10px]
+                                font-medium
+                                tracking-wide
 
-                                    hover:text-white
+                                transition-colors
+                                duration-300
 
-                                    focus-visible:outline-none
-                                    focus-visible:text-white
+                                hover:text-white
 
-                                    sm:px-1.5
-                                    sm:text-xs
+                                focus-visible:outline-none
+                                focus-visible:text-white
 
-                                    md:px-2
-                                    md:text-sm
+                                sm:px-1.5
+                                sm:text-xs
 
-                                    ${isActive
+                                md:px-2
+                                md:text-sm
+
+                                ${
+                                    isActive
                                         ? 'text-white'
                                         : 'text-white/60'
-                                    }
-                                `}
-                            >
-                                {item.label}
+                                }
+                            `}
+                        >
+                            {item.label}
 
-                                {/* Underline hover */}
-                                <span
-                                    aria-hidden="true"
-                                    className={`
-                                        absolute
-                                        bottom-1.5
-                                        left-1/2
-                                        h-px
-                                        -translate-x-1/2
+                            <span
+                                aria-hidden="true"
+                                className={`
+                                    absolute
+                                    bottom-1
+                                    left-1/2
+                                    h-px
+                                    -translate-x-1/2
 
-                                        bg-gradient-to-r
-                                        from-transparent
-                                        via-white
-                                        to-transparent
+                                    bg-gradient-to-r
+                                    from-transparent
+                                    via-white
+                                    to-transparent
 
-                                        transition-all
-                                        duration-300
-                                        ease-out
+                                    transition-all
+                                    duration-300
+                                    ease-out
 
-                                        ${isActive
+                                    ${
+                                        isActive
                                             ? 'w-full opacity-100'
                                             : 'w-0 opacity-0 group-hover:w-full group-hover:opacity-100'
-                                        }
-                                    `}
-                                />
-                            </a>
-                        );
-                    })}
-                </div>
-            </nav>
-        </header>
+                                    }
+                                `}
+                            />
+                        </a>
+                    );
+                })}
+            </div>
+        </div>
+    </nav>
+</header>
     );
 }
