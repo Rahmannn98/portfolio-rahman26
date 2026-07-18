@@ -1,7 +1,7 @@
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Project from "./components/Project";
-import Reward from "./components/Reward";
+import Reward from "./components/Experiences";
 
 export default function Home() {
   return (

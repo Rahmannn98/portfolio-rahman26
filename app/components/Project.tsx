@@ -3,48 +3,46 @@ import Image from "next/image";
 
 const projects = [
   {
-    src: "/gigiku.png",
-    alt: "GiguKU – Oral Health App",
-    title: "GiguKU",
-    subtitle: "Oral Health App",
-    role: "Team Work",
-    date: "March 2025",
-    desc: "With team Faham, finished the challenge hack at Thamrin Nine.",
+    src: "/signalCentry.jpg",
+    alt: "SignalCentry – Personal Project",
+    title: "Signal Centry",
+    subtitle: "get the gap knowledge about SwiftUI",
+    role: "Personal Project",
+    date: "June 2026",
+    desc: "This is a personal project to learn and feel gap knowledge about SwiftUI.",
   },
   {
-    src: "/globeku.png",
-    alt: "GlobeKu – Augmented Reality App",
-    title: "GlobeKu",
-    subtitle: "Augmented Reality App",
-    role: "iOS Developer",
+    src: "/gigiku.jpg",
+    alt: "Gigiku – Gamification Oral Health App",
+    title: "Gigiku",
+    subtitle: "Gamification Oral Health App",
+    role: "Ui designer",
     date: "March 2025",
-    desc: "Crafting user-centered digital experiences that are both functional and engaging.",
+    desc: "Created the user interface and experience for the gamification app.",
   },
   {
-    src: "/gotogether.png",
-    alt: "GoTogether",
-    title: "GoTogether",
-    subtitle: "Social Travel App",
-    role: "iOS Developer",
-    date: "March 2025",
-    desc: "Crafting user-centered digital experiences that are both functional and engaging.",
+    src: "/Luma.jpg",
+    alt: "Luma – Team Project",
+    title: "Luma",
+    subtitle: "Color Analysis App",
+    role: "iOS Developer & UI Designer",
+    date: "May 2026",
+    desc: "Created the iOS app and UI for the color analysis tool.",
   },
   {
-    src: "/redesign.png",
-    alt: "Redesign Project",
-    title: "Redesign",
-    subtitle: "UI/UX Case Study",
-    role: "iOS Developer",
-    date: "March 2025",
-    desc: "Crafting user-centered digital experiences that are both functional and engaging.",
+    src: "/signalCentry.jpg",
+    alt: "SignalCentry – Personal Project",
+    title: "Signal Centry",
+    subtitle: "Gamification",
+    role: "Personal Project",
+    date: "June 2026",
+    desc: "This is a personal project to learn and feel gap knowledge about SwiftUI.",
   },
 ];
 
 export default function Projects() {
   return (
     <section id="projects" className="w-full max-w-6xl px-6 py-24 relative flex flex-col items-center">
-
-      {/* Background watermark */}
       <h2
         className="absolute top-0 left-1/2 -translate-x-1/2 font-[family-name:var(--font-playfair)] font-bold select-none pointer-events-none -z-10 leading-none whitespace-nowrap"
         style={{
@@ -86,22 +84,13 @@ export default function Projects() {
               </span>
               <div className="flex-1 h-[1px] bg-white/10" />
             </div>
-
-            {/* Image container */}
-            <div
-              className="relative w-full overflow-hidden mb-5"
-              style={{
-                aspectRatio: "16 / 10",
-                background: "linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%)",
-                border: "1px solid rgba(255,255,255,0.07)",
-              }}
-            >
+            <div className="relative w-full aspect-video overflow-hidden mb-5">
               <Image
                 src={project.src}
                 alt={project.alt}
                 fill
-                sizes="(max-width: 768px) 100vw, 50vw"  
-                className="object-contain p-4 transition-transform duration-700 ease-out group-hover:scale-[1.04]"
+                sizes="(max-width: 768px) 100vw, 50vw"
+                className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]"
               />
 
               {/* Hover overlay */}
