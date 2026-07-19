@@ -3,13 +3,13 @@ import Image from "next/image";
 
 const projects = [
   {
-    src: "/signalCentry.jpg",
-    alt: "SignalCentry – Personal Project",
-    title: "Signal Centry",
-    subtitle: "get the gap knowledge about SwiftUI",
-    role: "Personal Project",
-    date: "June 2026",
-    desc: "This is a personal project to learn and feel gap knowledge about SwiftUI.",
+    src: "/Gahita.jpg",
+    alt: "Gahita – Final Project",
+    title: "Redesign Website Gahita",
+    subtitle: "Final Project in UI/UX Design",
+    role: "Full Stack",
+    date: "March 2025",
+    desc: "Redesigned the website for Gahita, focusing on improving user experience and visual appeal.",
   },
   {
     src: "/gigiku.jpg",
@@ -34,7 +34,7 @@ const projects = [
     alt: "SignalCentry – Personal Project",
     title: "Signal Centry",
     subtitle: "Gamification",
-    role: "Personal Project",
+    role: "iOS Developer",
     date: "June 2026",
     desc: "This is a personal project to learn and feel gap knowledge about SwiftUI.",
   },
