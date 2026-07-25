@@ -158,7 +158,7 @@ export default function Navbar() {
                 "
             >
                 <Image
-                    src="/logo-rahman-v2.png"
+                    src="/rahman-new.png"
                     alt="Saifulloh Rahman logo"
                     width={26}
                     height={60}
